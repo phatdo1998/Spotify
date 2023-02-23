@@ -11,7 +11,8 @@ const ListSongs = ({ handleSetSong, playSong, isMobile }) => {
 
   useEffect(() => {
     dispatch(getListSongs());
-  }, [dispatch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handlePlaySong = (idSong) => {
     setIdSong(idSong);
