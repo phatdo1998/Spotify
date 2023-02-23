@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSongById } from "../redux/songSlice";
@@ -11,7 +12,6 @@ const ListSongs = ({ handleSetSong, playSong, isMobile }) => {
 
   useEffect(() => {
     dispatch(getListSongs());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handlePlaySong = (idSong) => {
@@ -22,7 +22,6 @@ const ListSongs = ({ handleSetSong, playSong, isMobile }) => {
 
   useLayoutEffect(() => {
     handleSetSong(songs[0]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
