@@ -1,0 +1,72 @@
+@use "./scss/" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  color: $white;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+
+  @include mobile {
+    overflow: hidden;
+  }
+
+  @include tablet {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  color: $black;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  height: calc(100vh - 96px - 96px);
+  background-color: $body-bg;
+
+  @include tablet {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @include tablet {
+    height: calc(35vh);
+  }
+
+  @include mobile {
+    display: block;
+    height: calc(100vh - 70px - 184px);
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

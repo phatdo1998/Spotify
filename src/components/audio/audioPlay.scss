@@ -1,0 +1,14 @@
+@use "../../scss/" as *;
+
+.player {
+  position: relative;
+  top: 0px;
+  bottom: -7px;
+  background-color: $main-color;
+  padding: 14px 17px;
+}
+
+.rhap_time,
+.rhap_current-time {
+  color: $white;
+}
