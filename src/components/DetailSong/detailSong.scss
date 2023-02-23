@@ -1,0 +1,110 @@
+@use "../../scss/" as *;
+
+.detail {
+  grid-column: span 1 / span 1;
+  background-color: $body-bg;
+
+  &__wrapper {
+    padding: 16px;
+
+    .playing {
+      color: #06b6d4;
+      font-weight: 700;
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      @include tablet {
+        font-size: 12px;
+      }
+    }
+
+    .slogan {
+      color: $white;
+      font-weight: 400;
+      font-size: 24px;
+      color: #d4d4d4;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+
+  &__container {
+    margin: auto;
+    .avatar {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__inner {
+    width: 240px;
+    height: 240px;
+    margin: auto;
+    margin-top: 40px;
+
+    @include tablet {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include mobile {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  &__inner2 {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70px;
+    width: 100%;
+    .avatar2 {
+      height: 100%;
+      width: 70px;
+      border-radius: 100%;
+
+      @include tablet {
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+
+  .author {
+    font-size: 20px;
+    color: $white;
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+}
+
+.mb {
+  width: 100%;
+  height: 100%;
+  background-color: #1e293b;
+
+  &__wrapper {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: auto;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
