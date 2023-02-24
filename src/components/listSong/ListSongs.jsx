@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState, memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSongById } from "../redux/songSlice";
 import { getListSongs } from "../redux/songsSlice";
@@ -22,7 +22,7 @@ const ListSongs = ({ handleSetSong, playSong, isMobile }) => {
 
   useLayoutEffect(() => {
     handleSetSong(songs[0]);
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     setIdSong(playSong.id);
@@ -113,4 +113,4 @@ const ListSongs = ({ handleSetSong, playSong, isMobile }) => {
   );
 };
 
-export default ListSongs;
+export default memo(ListSongs);

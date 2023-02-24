@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import "./App.scss";
@@ -40,12 +40,12 @@ function App() {
   const { song } = useSelector((state) => state.song);
   const [playSong, setPlaySong] = useState(song);
 
-  const handleSetSong = (idSong) => {
+  const handleSetSong = useCallback((idSong) => {
     const song = dataSong.find((song) => song.id === idSong);
     setPlaySong(song);
     if (!song) setPlaySong(dataSong[0]);
     else setPlaySong(song);
-  };
+  }, []);
 
   return (
     <div className="App">
